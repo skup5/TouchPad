@@ -1,0 +1,14 @@
+{
+  "name": "touchpadjs",
+  "version": "1.0.0",
+  "description": "The remote touchpad simulator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "skup5",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io-client": "^2.2.0"
+  }
+}
