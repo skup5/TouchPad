@@ -3,15 +3,17 @@ from flask_socketio import SocketIO, emit
 import pyautogui as robot
 
 PORT = 3000
+HOST = '0.0.0.0'
+DEBUG = True
 
 app = Flask('FlaskServer')
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 
 
-# @app.route('/')
-# def index():
-#     return render_template('index.html')
+@app.route('/')
+def index():
+    return 'Flask server'
 
 
 @socketio.on('connected')
@@ -32,4 +34,4 @@ def move_rel(coordinates):
 
 
 if __name__ == '__main__':
-    socketio.run(app, port=PORT)
+    socketio.run(app, port=PORT, host=HOST)
